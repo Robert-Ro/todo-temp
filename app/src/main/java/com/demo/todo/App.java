@@ -4,15 +4,8 @@
 package com.demo.todo;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
-    public int getNum() {
-        return 10;
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        System.out.println("Hello World!");
     }
 }

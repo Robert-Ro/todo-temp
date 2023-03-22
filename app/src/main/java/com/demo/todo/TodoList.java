@@ -1,36 +1,29 @@
 package com.demo.todo;
 
-import java.util.ArrayList;
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 
-public class TodoList {
-    private List<ToDo> items;
 
-    public TodoList() {
-        items = new ArrayList<>();
-    }
 
-    public void addItem(ToDo item) {
-        items.add(item);
-    }
+public interface ToDoList {
+    Task add(Integer id, LocalDateTime dateTime,
+            String location,
+            String description);
 
-    public void removeItem(ToDo item) {
-        items.remove(item);
-    }
+    void clear();
 
-    public void clearList() {
-        items.clear();
-    }
+    List<Task> findAll();
 
-    public int getSize() {
-        return items.size();
-    }
+    List<Task> findAll(boolean completed);
 
-    public boolean containsItem(ToDo item) {
-        return items.contains(item);
-    }
+    List<Task> findAll(LocalDateTime from, LocalDateTime to, Boolean completed);
 
-    public List<ToDo> getItems() {
-        return items;
-    }
+    List<Task> findAll(Map<Task.Field, String> params, LocalDateTime from,
+            LocalDateTime to, Boolean completed, boolean andSearch);
+
+    Task findOne(int id);
+
+    boolean remove(int id);
+
 }
