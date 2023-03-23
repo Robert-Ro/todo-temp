@@ -4,36 +4,38 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import com.demo.todo.Task;
-import com.demo.todo.TaskImpl;
 import com.demo.todo.ToDoList;
 
 public class SPFEAFacadeImpl implements SPFEAFacade {
-    private List<String> customers;
-    private List<Task> tasks;
-    
+
     @Override
     public int addCustomer(String fName, String lName, String phone, String email) {
-        return 0;
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'addCustomer'");
     }
 
     @Override
     public Task addNewTask(LocalDateTime dateTime, String description, String location) {
-        return new TaskImpl(0, dateTime, location, location);
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'addNewTask'");
     }
 
     @Override
     public void completeTask(int id) {
-
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'completeTask'");
     }
 
     @Override
     public List<String> getAllCustomers() {
-        return customers;
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAllCustomers'");
     }
 
     @Override
     public List<Task> getAllTasks() {
-        return tasks;
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAllTasks'");
     }
 
     @Override
